@@ -10,14 +10,12 @@
     var wrap, colors;
     // colors = ["red"]
     var pallete = [
-        "r18", "b8", "r19", "g2", "r20", "r21", "b9", "r10",
-        "g3", "r11", "b4", "r12", "b5", "r13", "b6",
-        "r14", "g0", "r15", "b7", "r16", "g1", "r17"
+        "Alessandro"
     ];
 
     var bets = {
-        "green": [2,3,0,1],
-        "red": [18, 19,20,21,10,11,12,13,14,15,16,17],
+        "green": ["Aaa","Ee",0,1],
+        "red": [18, "Alexandra",20,21,10,11,12,13,14,15,16,"Alessandro"],
         "black": [8,9,4,5,6,7,]
     }
 
@@ -25,18 +23,18 @@
 
     wrap = document.querySelector('.roulette-container .wrap');
 
-    function spin_promise (color, number) {
+    function spin_promise (color, name) {
         return new Promise((resolve, reject) => {
             if (
-                (color === "green" || color === "g") && (number >= 0 && number <= 3) ||
-                (color === "black" || color === "b") && (number >= 4 && number <= 9) ||
-                (color === "red" || color === "r") && (number >= 10 && number <= 21) 
+                (color === "green" || color === "g") && (name = "Alessandro") ||
+                (color === "black" || color === "b") && (name= "Alexandra") ||
+                (color === "red" || color === "r") && (name= "Eberth")
             ) 
             {
                 let index, pixels, circles, pixelsStart;
 
                 color = color[0];
-                index = pallete.indexOf(color + "" + number);
+                index = pallete.indexOf(color + "Test" + name);
                 pixels = width * (index + 1);
                 circles = 1760 * 15; //15 circles
 
@@ -71,12 +69,13 @@
         if (1 <= r && r < 30) color = "green";
         else if (30 <= r && r < 530) color = "red";
         else if (530 <= r && r < 1000) color = "black";
-        let bet = bets[color][rand(0, bets[color].length)];
+        yes = "Yes"
+        let bet = bets[color].yes;
         spin_promise(color, bet).then(()  => {
             console.log("[Ended]");
             let colorBeted = document.createElement("div");
             colorBeted.setAttribute("class", "color-beted " + color[0]);
-            colorBeted.innerHTML = bet;
+            colorBeted.innerHTML = "Test";
             document.body.appendChild(colorBeted);
 
             setTimeout(function () {
