@@ -1,13 +1,13 @@
-import { useRef, useEffect } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
+// import { useRef, useEffect } from "react";
+// import * as THREE from "three";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+// import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
-const Avedorada = () => {
-    const mountRef = useRef(null);
+// const Avedorada = () => {
+//     const mountRef = useRef(null);
 
-    useEffect(() => {
+//     useEffect(() => {
         //Data from the canvas
         const currentRef = mountRef.current;
         const { clientWidth: width, clientHeight: height } = currentRef;
@@ -57,7 +57,7 @@ const Avedorada = () => {
 
         const gltfLoader2 = new GLTFLoader();
         gltfLoader2.setDRACOLoader();
-        gltfLoader2.load("./models/helmet/scene.gltf", (gltf) => {
+        gltfLoader2.load("./src/models/helmet/scene.gltf", (gltf) => {
             personaje2.add(gltf.scene);
             // personaje2.position.y = -0.8;
             // personaje2.position.x = -1;
@@ -106,15 +106,16 @@ const Avedorada = () => {
             window.removeEventListener("resize", resize);
             currentRef.removeChild(renderer.domElement);
         };
-    }, []);
+    // }, []);
 
-    return (
-        <div
-            className='Contenedor3D'
-            ref={mountRef}
-            style={{ width: "51%", height: "40vh" }}
-        ></div>
-    );
-};
+    // return (
+    //     <div
+    //         className='Contenedor3D'
+    //         ref={mountRef}
+    //         style={{ width: "51%", height: "40vh" }}
+    //     ></div>
+    // );
+// };
 
-export default Avedorada;
+init()
+

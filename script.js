@@ -1,4 +1,4 @@
-;(function(loader) {
+(function(loader) {
     document.addEventListener("DOMContentLoaded", loader[0], false);
 })([function (eventLoadedPage) {
     "use strict";
@@ -10,15 +10,16 @@
     var wrap, colors;
     // colors = ["red"]
     var pallete = [
-        "r18", "b8", "r19", "g2", "r20", "r21", "b9", "r10",
-        "g3", "r11", "b4", "r12", "b5", "r13", "b6",
-        "r14", "g0", "r15", "b7", "r16", "g1", "r17"
+        "rCarla", "bAlejandra", "rJerry", "gEberth", "rCamilo","rJudith",
+        "gAless", "gAleMorales", "bLydia","rIngrid", "gAlejandro", "nGary",
+        "gOksana", "rMatt", "gGuillem", "rAdrian", "rMario", "gMamadou",
+        "nIsabel"
     ];
 
     var bets = {
-        "green": [2,3,0,1],
-        "red": [18, 19,20,21,10,11,12,13,14,15,16,17],
-        "black": [8,9,4,5,6,7,]
+        "green": ["eberth","aless", "AleMorales", "Alejandro", "Oksana", "Guillem", "Mamadou"],
+        "red": ["carla","jerry", "Camilo","Judith", "Ingrid", "Matt", "Adrian", "Mario"],
+        "black": ["alejandra","lydia", "Gary", "Isabel"]
     }
 
     var width = 80;
@@ -28,9 +29,9 @@
     function spin_promise (color, number) {
         return new Promise((resolve, reject) => {
             if (
-                (color === "green" || color === "g") && (number >= 0 && number <= 3) ||
-                (color === "black" || color === "b") && (number >= 4 && number <= 9) ||
-                (color === "red" || color === "r") && (number >= 10 && number <= 21) 
+                (color === "green" || color === "g") ||
+                (color === "black" || color === "b")  ||
+                (color === "red" || color === "r")  
             ) 
             {
                 let index, pixels, circles, pixelsStart;
@@ -38,7 +39,7 @@
                 color = color[0];
                 index = pallete.indexOf(color + "" + number);
                 pixels = width * (index + 1);
-                circles = 1760 * 15; //15 circles
+                circles = 1760 * 5; //15 circles
 
                 pixels -= 80;
                 pixels = rand(pixels + 2, pixels + 79);
@@ -53,11 +54,11 @@
                     let pos = (((pixels * -1) - circles) * -1) + (wrap.offsetWidth / 2);
                     wrap.style.backgroundPosition = String(pos) + "px";
                     setTimeout(() => {
-                        wrap.style.transition = "background-position 5s";
+                        wrap.style.transition = "background-position 3s";
                         resolve();
-                    }, 510);
+                    }, 1000);
 
-                }, 5000 + 700);
+                }, 1000);
             }
         });
     }
