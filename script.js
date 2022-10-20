@@ -12,31 +12,6 @@ let sounds = {
 
 
 
-  let items = [['Alessandro',],
-               ['Alexandra'],
-               ['Eberth'],
-               ['Jerry'],
-               ['Carla'],
-               ['Gary'],
-               ['Cristian'],
-               ['Alejandra'],
-               ['Camilo'],
-               ['Francisco'],
-               ['Rodrigo'],
-               ['Isabel'],
-               ['Alejandro'],
-               ['Mario'],
-               ["Guillem"],
-               ["Oksana"],
-               ["Lidia"],
-               ["Erick"],
-               ["Mamadou"],
-               ["Albert"],
-               ["Judit"],
-               ["Federico"],
-               ["Mateo"],
-               ["Eduard"]
-  ];
   let maxOffset = items.length * 195;
 
   const randomElement = items[Math.floor(Math.random() * items.length)];
@@ -57,7 +32,6 @@ let sounds = {
   items.forEach(function(e) {
     let newItem = item.content.cloneNode(true);
     newItem.querySelector('span').textContent = e[0];
-    newItem.querySelector('span').classList.add("asd")
     roulette.appendChild(newItem);
   });
                           
@@ -85,7 +59,31 @@ let sounds = {
       txt.textContent = items[selected][1];
       */
     }, 2500);
-    let elem = document.querySelector('span');
-    let rect = elem.getBoundingClientRect();
-    console.log(rect)
+    const elem = document.querySelector('.span');
+    const rect = elem.getBoundingClientRect();
+    for (const key in rect) {
+          if (typeof rect[key] !== 'function') {
+            console.log(rect[key[0]])
+          }}
+    // let rect = elem[0].getBoundingClientRect();
+    console.log(elem)
   }
+
+  // function update() {
+  //   const container = document.getElementById("controls");
+  //   const elem = document.getElementById("example");
+  //   const rect = elem.getBoundingClientRect();
+  
+  //   container.innerHTML = '';
+  //   for (const key in rect) {
+  //     if (typeof rect[key] !== 'function') {
+  //       let para = document.createElement('p');
+  //       para.textContent = `${key} : ${rect[key]}`;
+  //       container.appendChild(para);
+  //       console.log(rect[key[0]])
+  //     }
+  //   }
+  // }
+  
+  // document.addEventListener('scroll', update);
+  // update();
