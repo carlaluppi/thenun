@@ -26,10 +26,14 @@ body {
         min-width: 200px;
         height: 200px;
         flex-direction: column;
+		transform: translateX(45px);
         display: flex;
         border-right: 2px solid #888;
         justify-content: center;
         align-items: center;
+		&:first:child{
+			border-left: 2px solid #888;
+		}
 		i {
 			font-size: 72px;
 		}
@@ -97,8 +101,8 @@ button {
 			  transform: translateX(0);
 	}
 	100% {
-	  -webkit-transform: translateX(-1950px);
-			  transform: translateX(-1950px);
+	  -webkit-transform: translateX(-2000px);
+			  transform: translateX(-2000px);
 	}
   }
   @keyframes slide-right {
@@ -107,7 +111,7 @@ button {
 			  transform: translateX(0);
 	}
 	100% {
-	  -webkit-transform: translateX(-1950px);
-			  transform: translateX(-1950px);
+	  -webkit-transform: translateX(-2000px);
+			  transform: translateX(-2000px);
 	}
   }

@@ -1,4 +1,4 @@
-let items = [{
+const items = [{
     name: "Alessandro"
 },
 {
