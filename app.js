@@ -55,11 +55,11 @@ function init() {
 
 //Animate rotation
 
-// function animate(){
-//     requestAnimationFrame(animate);
-//     person.rotation.z += 0.01;
-//     renderer.render(scene, camera);
-// }
+function animate(){
+    requestAnimationFrame(animate);
+    person.rotation.z += 0.01;
+    renderer.render(scene, camera);
+}
 
 init();
 
