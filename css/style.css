@@ -25,6 +25,9 @@ body {
   height: 200px;
   display: inline-flex;
 }
+#roulette div:first-of-type {
+  border-left: 2px solid #888;
+}
 #roulette div {
   min-width: 200px;
   height: 200px;
@@ -34,9 +37,6 @@ body {
   border-right: 2px solid #888;
   justify-content: center;
   align-items: center;
-}
-#roulette div:first:child {
-  border-left: 2px solid #888;
 }
 #roulette div i {
   font-size: 72px;
@@ -70,70 +70,8 @@ button:hover {
   cursor: pointer;
 }
 
-.shine {
-  -webkit-animation: brillo 0.5s ease;
-          animation: brillo 0.5s ease;
-}
-
 #txt {
   margin-top: 1em;
   font-family: Montserrat;
   color: #FFF;
-}
-
-.asd {
-  background-color: blue;
-}
-
-@-webkit-keyframes brillo {
-  0% {
-    border-bottom-color: steelblue;
-  }
-  25%, 75% {
-    border-bottom-color: green;
-  }
-  100% {
-    border-bottom-color: steelblue;
-  }
-}
-
-@keyframes brillo {
-  0% {
-    border-bottom-color: steelblue;
-  }
-  25%, 75% {
-    border-bottom-color: green;
-  }
-  100% {
-    border-bottom-color: steelblue;
-  }
-}
-.bob {
-  width: 400px;
-  height: 200px;
-  padding: 20px;
-  margin: 50px auto;
-  background: purple;
-}
-
-.slide-right {
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2000px);
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2000px);
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+// animations
+
+.shine {
+	animation: brillo .5s ease;
+}
+
+@keyframes brillo {
+    0% { border-bottom-color:steelblue; }
+    25%, 75% { border-bottom-color:green; }
+    100% { border-bottom-color:steelblue; }
+  }
+
+
+.slide-right {
+	-webkit-animation: slide-right 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-right 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-right {
+	0% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	}
+	100% {
+	  -webkit-transform: translateX(-3800px);
+			  transform: translateX(-3800px);
+	}
+  }
+  @keyframes slide-right {
+	0% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	}
+	100% {
+	  -webkit-transform: translateX(-3800px);
+			  transform: translateX(-3800px);
+	}
+  }
+
+
+.crossout {
+position: relative;
+}
+.crossout::after {
+content: ' ';
+position: absolute;
+top: 50%;
+left: 0;
+width: 100%;
+height: 2px;
+background: black;
+animation-name: crossout;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+
+@keyframes crossout {
+    0%   { width : 0;};
+    100% { width: 100%;}
+    }
+
+.flip-in-ver-right {
+	-webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+ @-webkit-keyframes flip-in-ver-right {
+	0% {
+	  -webkit-transform: rotateY(-80deg);
+			  transform: rotateY(-80deg);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: rotateY(0);
+			  transform: rotateY(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes flip-in-ver-right {
+	0% {
+	  -webkit-transform: rotateY(-80deg);
+			  transform: rotateY(-80deg);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: rotateY(0);
+			  transform: rotateY(0);
+	  opacity: 1;
+	}
+  }
+  
