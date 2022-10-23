@@ -73,10 +73,10 @@ const dummyitems = [
         name: "Coder"
     }, {
         id: 19,
-        name: "Coder"
+        name: "Target"
     }, {
         id: 20,
-        name: "Target"
+        name: "Coder"
     }, {
         id: 21,
         name: "Coder"

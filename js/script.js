@@ -8,7 +8,8 @@ let arrow = document.querySelector('#arrow');
 let txt = document.querySelector('#txt');
 let item = document.querySelector('#item');
 let killBtn = document.querySelector('#killBtn');
-let addBtn = document.querySelector('#addName')
+let addBtn = document.querySelector('#addBtn');
+let submit = document.querySelector('#submit');
 
 
 // const randomElement = items[Math.floor(Math.random() * items.length)];
@@ -16,13 +17,14 @@ const killBtnHandler = () => {
   spin();
 }
 
-const addNameBtnHandler = () => {
+const submitHandler = (e) => {
+  e.preventDefault();
   addName();
 }
 
 const addListener = () => {
     killBtn.addEventListener('click', killBtnHandler);
-    // addBtn.addEventListener('click', addNameBtnHandler);
+    submit.addEventListener('submit', submitHandler);
 }
 
 addListener();
@@ -40,7 +42,6 @@ roulette.appendChild(newItem);
 
 
 function addName(){
-
   boxvalue = document.getElementById('submitText').value;
   console.log(boxvalue)
   let objectName = {
