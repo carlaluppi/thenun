@@ -1,6 +1,7 @@
 let sounds = {
-  spin: new Audio('https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/js/spin.mp3'),
-  win: new Audio('https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/js/win.mp3')
+  spin: new Audio('sounds/spinning-reel-27903.mp3'),
+  win: new Audio('sounds/laughing-ghost-horror.mp3'),
+  killSound: new Audio('sounds/demonic-woman-scream-6333.mp3')
 }
 
 let roulette = document.querySelector('#roulette');
@@ -110,6 +111,10 @@ setTimeout(function() {
   nameSelect();
 }, 4500);
 setTimeout(function(){crossOutAnimation();}, 5000);
-setTimeout(function(){roulette.classList.remove('slide-right');}, 6500);
-setTimeout(function(){nunAnimation()}, 6500)
+setTimeout(function(){roulette.classList.remove('slide-right');
+sounds.win.pause();
+currentTime=0;
+}, 7000);
+setTimeout(function(){nunAnimation();
+sounds.killSound.play()}, 7500)
 }
