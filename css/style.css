@@ -1,34 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
 body {
-  background: #000;
-  background-image: url("/images/background.png");
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: url("/images/background.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 #square {
-  width: 500px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 530px;
 }
 
 #box {
   width: 300px;
-  height: 200px;
-  margin: 5em auto 0 auto;
+  height: 120px;
+  margin: 2em auto 0 auto;
   background: #FFF;
   overflow: hidden;
-  border: 0px solid #888;
-  background-color: white;
+  border: 2px solid #f8f9fa;
+  background-color: rgba(243, 215, 39, 0.5098039216);
 }
 
 #roulette {
   width: 400px;
-  height: 200px;
+  height: 140px;
   display: inline-flex;
 }
 #roulette div:first-of-type {
@@ -36,7 +32,7 @@ body {
 }
 #roulette div {
   min-width: 200px;
-  height: 200px;
+  height: 125px;
   flex-direction: column;
   transform: translateX(45px);
   display: flex;
@@ -48,9 +44,11 @@ body {
   font-size: 72px;
 }
 #roulette div span {
-  font-family: Montserrat;
+  font-family: Cinzel;
   letter-spacing: -1px;
-  font-size: 32px;
+  font-size: 40px;
+  color: #f8f9fa;
+  text-shadow: 4px 3px 2px #141619;
 }
 
 #arrow {
@@ -58,33 +56,46 @@ body {
   height: 0;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 100px solid steelblue;
+  border-bottom: 80px solid white;
   position: relative;
-  top: -85px;
+  top: -25px;
+  opacity: 90%;
 }
 
 button {
   width: 150px;
   height: 50px;
   font-size: 22px;
-  background: red;
+  background: var(--primary-color);
   border: 0;
   color: #FFF;
 }
 button:hover {
-  background: green;
+  border: 1px solid white;
   cursor: pointer;
 }
 
 #txt {
   margin-top: 1em;
-  font-family: Montserrat;
-  color: #FFF;
+  font-family: Cinzel;
+  color: var(--primary-color);
+}
+
+.nunContainer {
+  display: flex;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: scroll;
 }
 
 .faceNun {
-  width: 40vh;
-  display: flex;
+  opacity: 5%;
   margin: auto;
+  width: 10vh;
+  height: 10vh;
+  top: 23%;
+  position: absolute;
+  z-index: 1;
   margin-top: 200px;
 }/*# sourceMappingURL=style.css.map */
