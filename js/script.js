@@ -10,6 +10,7 @@ let item = document.querySelector('#item');
 let killBtn = document.querySelector('#killBtn');
 let addBtn = document.querySelector('#addBtn');
 let submit = document.querySelector('#submit');
+let faceNun = document.querySelector('.faceNun');
 
 
 // const randomElement = items[Math.floor(Math.random() * items.length)];
@@ -76,6 +77,14 @@ function nameReset() {
   elem[19].innerText = "Coder";
 }
 
+
+// funcion que añade animaciones de la monja
+
+function nunAnimation() {
+  faceNun.classList.add("scale-up-center");
+  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
+}
+
 // funcion que raya el nombre
 
 function crossOutAnimation() {
@@ -85,6 +94,7 @@ function crossOutAnimation() {
 }
 
 // funcion que ejecuta el nameChange, gira la ruleta, y utiliza sonidos(los cuales resetea al final)
+
 
 function spin() {
 nameReset();
@@ -101,4 +111,5 @@ setTimeout(function() {
 }, 4500);
 setTimeout(function(){crossOutAnimation();}, 5000);
 setTimeout(function(){roulette.classList.remove('slide-right');}, 6500);
+setTimeout(function(){nunAnimation()}, 6500)
 }
