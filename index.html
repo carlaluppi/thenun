@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
     <title>Document</title>
 </head>
 <body>
-  <button type="button" class="btn btn-primary">Primary</button>
-
-  <h1 class="hola">HOLAAAA</h1>
-
-    <div class="roulette">
-        <div class="roulette-container">
-          <div class="wrap">
-            <div class="controller"></div>
+  <div id="square">
+    <div id="box">
+      <div id="roulette">
+        <template id="item">
+          <div>
+            <span></span>
           </div>
-        </div>
+        </template>
       </div>
-    <script src="script.js"></script>
+    </div>
+    <div id="arrow"></div>
+    <button id="killBtn">Spin</button>
+    <div id="txt"></div>
+  </div>
+  <form id="submit">
+    <input type="text" id="submitText" name="fname">
+    <input type="submit" value="Add" id="addBtn">
+  </form>
 </body>
+  <script src="./js/falseobject.js"></script>
+  <script src="./js/object.js"></script>
+	<script src="./js/script.js"></script>
 </html>
