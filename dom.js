@@ -61,7 +61,7 @@ let addName = () => {
 let updateStats = () => {
     let element = list.querySelectorAll('div');
     let checkbox = list.querySelectorAll('input[type="checkbox"]:checked')
-    statutus.innerHTML = `<p>Tareas pendientes: ${element.length} completadas: ${checkbox.length}</p>`
+    // statutus.innerHTML = `<p>Tareas pendientes: ${element.length} completadas: ${checkbox.length}</p>`
 };
 
 let deleteName = (id) => {
