@@ -1,40 +1,24 @@
-function square() {
 
-    let redElement = document.getElementById('red');
-    let poe = 0;
-    let animation = setInterval(anim, 5);
 
-    function anim() {
-        if (poe == 350) {
-            clearInterval(animation);
-        } else {
-
-            poe++;
-            redElement.style.top = poe + "px";
-            redElement.style.left = poe + "px";
-        }
-
-    }
-
-}
-
-// btnexample.addEventListener('click', ( => {
-//     console.
-// }))
+//Add Coder from Front
 
 let IdCounter = 0;
 const input = document.querySelector('input[type="text"]');
+const add = document.querySelector('addBtn')
 
 coderInput.addEventListener('submit', (e) => {
     e.preventDefault();
-    addName();
+    if (input.value.trim().length != 0) {
+
+        addName();
+    }
 });
 
 list.addEventListener('click', (e) => {
     // console.log(e.srcElement.nodeName);
-    if(e.srcElement.nodeName == 'INPUT'){
+    if (e.srcElement.nodeName == 'INPUT') {
         updateStats();
-    } else if(e.srcElement.nodeName == 'IMG') {
+    } else if (e.srcElement.nodeName == 'IMG') {
         // console.log(e.srcElement.parentNode.id);
         deleteName(e.srcElement.parentNode.id);
     }
@@ -42,15 +26,15 @@ list.addEventListener('click', (e) => {
 })
 
 let addName = () => {
-    IdCounter ++;
+    IdCounter++;
     let newValue = input.value;
     list.innerHTML += `
     <div class="task-container" id="${IdCounter}">
-        <label>
-            <input type="checkbox">
+        <label>            
             ${newValue}
         </label>
-        <img src="" class="closeBtn">
+        
+        <img src="./images/delete.png" class="closeBtn">
     </div>
     `
 
