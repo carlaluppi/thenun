@@ -1,6 +1,7 @@
 let sounds = {
-  spin: new Audio('https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/js/spin.mp3'),
-  win: new Audio('https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/js/win.mp3')
+  spin: new Audio('sounds/spinning-reel-27903.mp3'),
+  win: new Audio('sounds/laughing-ghost-horror.mp3'),
+  killSound: new Audio('sounds/demonic-woman-scream-6333.mp3')
 }
 
 let roulette = document.querySelector('#roulette');
@@ -10,6 +11,7 @@ let item = document.querySelector('#item');
 let killBtn = document.querySelector('#killBtn');
 let addBtn = document.querySelector('#addBtn');
 let submit = document.querySelector('#submit');
+let faceNun = document.querySelector('.faceNun');
 
 
 // const randomElement = items[Math.floor(Math.random() * items.length)];
@@ -76,6 +78,14 @@ function nameReset() {
   elem[19].innerText = "Coder";
 }
 
+
+// funcion que añade animaciones de la monja
+
+function nunAnimation() {
+  faceNun.classList.add("scale-up-center");
+  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
+}
+
 // funcion que raya el nombre
 
 function crossOutAnimation() {
@@ -85,6 +95,7 @@ function crossOutAnimation() {
 }
 
 // funcion que ejecuta el nameChange, gira la ruleta, y utiliza sonidos(los cuales resetea al final)
+
 
 function spin() {
 nameReset();
@@ -100,5 +111,17 @@ setTimeout(function() {
   nameSelect();
 }, 4500);
 setTimeout(function(){crossOutAnimation();}, 5000);
-setTimeout(function(){roulette.classList.remove('slide-right');}, 6500);
+setTimeout(function(){roulette.classList.remove('slide-right');
+sounds.win.pause();
+currentTime=0;
+}, 7000);
+setTimeout(function(){nunAnimation();
+sounds.killSound.play()}, 7500);
+setTimeout(function(){deathPopUp()}, 8500)
+}
+
+// When the user clicks on <div>, open the popup
+function deathPopUp() {
+  let popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
