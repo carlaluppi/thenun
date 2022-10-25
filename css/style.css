@@ -4,12 +4,18 @@ body {
   background-size: cover;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
 #square {
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 530px;
+  justify-content: flex-end;
 }
 
 #box {
@@ -18,8 +24,8 @@ body {
   margin: 2em auto 0 auto;
   background: #FFF;
   overflow: hidden;
-  border: 2px solid #f8f9fa;
-  background-color: rgba(243, 215, 39, 0.5098039216);
+  border: 2px solid #5d575a;
+  background-color: var(--primary-color);
 }
 
 #roulette {
@@ -86,21 +92,21 @@ button:hover {
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: scroll;
 }
 
 .faceNun {
-  opacity: 5%;
-  margin: auto;
+  opacity: 0%;
   width: 10vh;
   height: 10vh;
-  top: 23%;
-  position: absolute;
   z-index: 1;
-  margin-top: 200px;
 }
 
 /* Popup container */
+.popUpWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .popup {
   position: relative;
   display: inline-block;
@@ -111,7 +117,7 @@ button:hover {
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
-  background-color: #555;
+  background-color: var(--primary-color);
   color: #fff;
   text-align: center;
   border-radius: 6px;
