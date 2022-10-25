@@ -19,14 +19,14 @@ const killBtnHandler = () => {
   spin();
 }
 
-const submitHandler = (e) => {
-  e.preventDefault();
-  addName();
-}
+// const submitHandler = (e) => {
+//   e.preventDefault();
+//   addName();
+// }
 
 const addListener = () => {
     killBtn.addEventListener('click', killBtnHandler);
-    submit.addEventListener('submit', submitHandler);
+    // submit.addEventListener('submit', submitHandler);
 }
 
 addListener();
