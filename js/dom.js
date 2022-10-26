@@ -22,7 +22,6 @@ list.addEventListener('click', (e) => {
         // console.log(e.srcElement.parentNode.id);
         deleteName(e.srcElement.parentNode.id);
     }
-
 })
 
 let addName = () => {
@@ -40,6 +39,7 @@ let addName = () => {
 
     input.value = '';
     updateStats();
+    console.log(localStorage)
 };
 
 let updateStats = () => {
