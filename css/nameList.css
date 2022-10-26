@@ -18,9 +18,9 @@
 
 body {
   background-color: #100f0f;
-  background-image: linear-gradient(180deg, #100f0f 1%, #f50707 54%, #030303 100%);
+  background-image: linear-gradient(180deg, #4a0909 0%, #f50707 74%, #030303 100%);
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,9 @@ body {
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 600;
-  color: #FFFFFF;
-  -webkit-text-stroke: 0.7px #86090A;
+  color: #FFFFFF;  
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(196, 177, 107, 0.79);
 }
 
 .input-btn {
@@ -44,7 +45,7 @@ body {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
 }
 
 form {
@@ -81,12 +82,7 @@ form input[type="text"]:focus {
   border-radius: 50%;
   border-style: none;
   color: rgb(143, 11, 11);
-}
-
-.input-btn button:hover {
-  background-color: #fff;
-  color: #32e7ff;
-  transition: all 0.5s 0s ease;
+  cursor: pointer;
 }
 
 .input-btn button:not(:hover) {
@@ -100,35 +96,27 @@ form input[type="text"]:focus {
 .list-tasks ul {
   padding-left: 0;
   margin: 0 13px;
+  
 }
 
 .list-tasks li {
-  font-size: 21px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  color: white;  
 }
 
-/* .list-tasks li:first-letter {
-  color: #32e7ff;
-  text-transform: uppercase;
-} */
-
-.closeBtn {
-  width: 20px;
-  height: 20px;
-}
-
-.closeBtn:hover {
+span{
   cursor: pointer;
 }
 
 /*remove all btn*/
 .remove-all {
   border-radius: none;
-  border-color:var(--grey);
-  background-color: var(--white);
-  color: rgb(143, 11, 11);
+  border-color:white;
+  background-color: rgb(143, 11, 11);
+  color: white;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
@@ -145,6 +133,14 @@ form input[type="text"]:focus {
 .remove-all:not(:hover) {
 
   transition: all 0.5s 0s ease;
+}
+
+.arrow{
+  margin-top: 10%;
+  margin-left: 90%;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
 }
 
 /*responsive*/
