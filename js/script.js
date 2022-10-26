@@ -83,6 +83,7 @@ function nameReset() {
 
 function nunAnimation() {
   faceNun.classList.add("scale-up-center");
+  sounds.killSound.play();
   setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
 }
 
@@ -115,13 +116,19 @@ setTimeout(function(){roulette.classList.remove('slide-right');
 sounds.win.pause();
 currentTime=0;
 }, 7000);
-setTimeout(function(){nunAnimation();
-sounds.killSound.play()}, 7500);
-setTimeout(function(){deathPopUp()}, 8500)
+setTimeout(function(){nunAnimation()}, 7500);
+setTimeout(function(){
+  deathPopUp();
+}, 11000)
 }
 
-// When the user clicks on <div>, open the popup
+// Death
 function deathPopUp() {
+  let elem = document.querySelectorAll('span')
   let popup = document.getElementById("myPopup");
+  popup.innerText = `El/la coder ${elem[19].innerText} ha sido sacrificad@.`
   popup.classList.toggle("show");
+  setTimeout(function(){
+    popup.classList.toggle("show");
+  }, 3000)
 }
