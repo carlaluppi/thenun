@@ -5,8 +5,11 @@
     height: 100vh;
     object-fit: contain;
     position: absolute;
-    
+    /* visibility: hidden;
+    display: none; */    
 }
+
+
 
 
 .container-btn
@@ -36,6 +39,19 @@
     padding: 9px 16px;
     margin-bottom: 50px;
   }
+
+  /* @media (max-width: 600px) {
+    .back-desk{
+        visibility: hidden;
+        display: none;
+    }
+    .background_img{
+        
+        visibility: visible;
+        
+        
+    }
+  } */
 
 
 
