@@ -12,7 +12,8 @@ let killBtn = document.querySelector('#killBtn');
 let addBtn = document.querySelector('#addBtn');
 let submit = document.querySelector('#submit');
 let faceNun = document.querySelector('.faceNun');
-let hallWayCreepy = document.querySelector('.hallWay');   
+let hallWayCreepy = document.querySelector('.hallWay'); 
+let resetBtn = document.querySelector('#btnReset');
 
 // const randomElement = items[Math.floor(Math.random() * items.length)];
 
@@ -30,10 +31,16 @@ function render() {
   const killBtnHandler = () => {
     spin();
   }
+
+  const btnResetHandler = () => {
+  document.location.href="index.html"
+  }
   
+
   const addListener = () => {
       killBtn.addEventListener('click', killBtnHandler);
       // submit.addEventListener('submit', submitHandler);
+      btnReset.addEventListener('click', btnResetHandler);
   }
   addListener();
   // funcion para añadir los nombres falsos("Coders") a la roulette
@@ -43,6 +50,7 @@ function render() {
   newItem.querySelector('span').textContent = e.name;
   roulette.appendChild(newItem);
   });
+
 }
 render();
 

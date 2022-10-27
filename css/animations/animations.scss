@@ -106,8 +106,8 @@ animation-fill-mode: forwards;
 			  transform: scale(1);
 	}
 	100% {
-	  -webkit-transform: scale(2);
-			  transform: scale(2);	
+		-webkit-transform: translate(-50%, 35%)scale(15);
+		transform: translate(-50%, 35%)scale(15);
 	}
   }
   @keyframes scale-up-center {
