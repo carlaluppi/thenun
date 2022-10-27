@@ -4,16 +4,16 @@ html {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   height: 100vh;
 }
 
 .hallWay {
-  background: url("../images/background.png") no-repeat center center fixed;
+  background: url("/images/background.png") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hallWayCreepy {
@@ -26,7 +26,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 80%;
 }
 
 #box {
