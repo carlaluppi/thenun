@@ -6,6 +6,7 @@ let IdCounter = 0;
 const input = document.querySelector('input[type="text"]');
 const add = document.querySelector('addBtn')
 
+/* Preventing the default action of the submit button. */
 coderInput.addEventListener('submit', (e) => {
     e.preventDefault();
     if (input.value.trim().length != 0) {
