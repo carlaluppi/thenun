@@ -1,9 +1,14 @@
 @import '../variables';
 
-	html{
-		height: 100%;
-	}
 
+
+html{
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
 
 main {
 	height: 100vh;
@@ -71,7 +76,7 @@ main {
 		span {
 			
 			letter-spacing: -1px;
-			font-size: 40px;
+			font-size: 24px;
 			color: #f8f9fa;
 			text-shadow: 4px 3px 2px #141619;
 		}

@@ -36,7 +36,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-3600px);
+    transform: translateX(-3430px);
   }
 }
 @keyframes slide-right {
@@ -44,7 +44,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-3600px);
+    transform: translateX(-3430px);
   }
 }
 .crossout {
@@ -116,7 +116,7 @@
 .scale-up-center {
   opacity: 100%;
   -webkit-animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-center 1s cubic-bezier(0.19, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -132,7 +132,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(15);
+    transform: translate(-50%, 35%) scale(15);
   }
 }
 @media only screen and (min-width: 600px) {
@@ -141,7 +141,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3530px);
+      transform: translateX(-3350px);
     }
   }
   @keyframes slide-right {
@@ -149,7 +149,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3530px);
+      transform: translateX(-3350px);
     }
   }
 }
@@ -159,7 +159,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3425px);
+      transform: translateX(-3200px);
     }
   }
   @keyframes slide-right {
@@ -167,7 +167,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3425px);
+      transform: translateX(-3250px);
     }
   }
 }
@@ -177,7 +177,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3400px);
+      transform: translateX(-3100px);
     }
   }
   @keyframes slide-right {
@@ -185,7 +185,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-3400px);
+      transform: translateX(-3200px);
     }
   }
 }/*# sourceMappingURL=animations.css.map */

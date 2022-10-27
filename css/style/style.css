@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
 :root {
-  --primary-color: rgba(201, 5, 5, 1);
+  --primary-color: rgb(143, 11, 11);
   --secondary-color: rgb(243,215,39);
 }
 
 html {
   height: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 main {
@@ -67,7 +71,7 @@ main {
 }
 #roulette div span {
   letter-spacing: -1px;
-  font-size: 40px;
+  font-size: 24px;
   color: #f8f9fa;
   text-shadow: 4px 3px 2px #141619;
 }
