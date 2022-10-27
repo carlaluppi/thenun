@@ -12,6 +12,7 @@ let killBtn = document.querySelector('#killBtn');
 let addBtn = document.querySelector('#addBtn');
 let submit = document.querySelector('#submit');
 let faceNun = document.querySelector('.faceNun');
+let hallWayCreepy = document.querySelector('.hallWay');   
 
 
 // const randomElement = items[Math.floor(Math.random() * items.length)];
@@ -40,19 +41,23 @@ roulette.appendChild(newItem);
 });
 
 
+
+
+
+// function addName(){
+//   boxvalue = document.getElementById('submitText').value;
+//   console.log(boxvalue)
+//   let objectName = {
+//     name: boxvalue
+//   }
+//   items.push(objectName);
+//   console.log(items)
+//   return false;
+//  }
+
+
 // funcion que crea un nombre al azar, cambia el nombre target por ese nombre, y luego lo elimina del array "items"
 
-
-function addName(){
-  boxvalue = document.getElementById('submitText').value;
-  console.log(boxvalue)
-  let objectName = {
-    name: boxvalue
-  }
-  items.push(objectName);
-  console.log(items)
-  return false;
- }
 
 function nameSelect() {
   let random = items.sort(() => .5 - Math.random()).slice(0, 1)
@@ -70,6 +75,15 @@ function nameSelect() {
     setTimeout(function(){elem[19].classList.remove('flip-in-ver-right')}, 2000)
   })
 }
+// funcion que resetear el array cuando queda el ultimo coder 
+
+
+function gameReset () {
+  const lastCoder = items[items.length - 1]
+  console.log(lastCoder)
+  if(items.length < 1 )
+  {document.location.href="prueba.html"}
+}  
 
 // resetea el nombre del target a "Coder"
 
@@ -84,8 +98,15 @@ function nameReset() {
 function nunAnimation() {
   faceNun.classList.add("scale-up-center");
   sounds.killSound.play();
-  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
+  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2000)
 }
+
+// funcion de oscurecer la pantalla 
+
+function oscurecerAnimation() {
+  hallWayCreepy.classList.add("hallWayCreepy");
+setTimeout(function(){hallWayCreepy.classList.remove("hallWayCreepy")}, 4500)}
+  
 
 // funcion que raya el nombre
 
@@ -117,9 +138,12 @@ sounds.win.pause();
 currentTime=0;
 }, 7000);
 setTimeout(function(){nunAnimation()}, 7500);
-setTimeout(function(){
-  deathPopUp();
-}, 11000)
+setTimeout(function(){oscurecerAnimation();}, 9500);
+setTimeout(function(){deathPopUp();
+}, 11000);
+
+setTimeout(function(){gameReset();}, 15000);
+
 }
 
 // Death
@@ -131,4 +155,6 @@ function deathPopUp() {
   setTimeout(function(){
     popup.classList.toggle("show");
   }, 3000)
+
+
 }
