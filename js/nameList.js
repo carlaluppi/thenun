@@ -3,6 +3,31 @@ const listTasks = document.querySelector('.list-tasks ul');
 const message = document.querySelector('.list-tasks');
 let tasks = [];
 
+
+/* Listening for a submit event on the form. */
+coderInput.addEventListener('submit', (e) => {
+    e.preventDefault();
+    /* Checking if the input is empty or not. */    
+
+        addTasks();
+    
+});
+/* Listening for a click event on the button. */
+Btnid.addEventListener('click', (e) => {
+    e.preventDefault();
+    /* Checking if the input is empty or not. */   
+
+        addTasks();    
+});
+
+Removeid.addEventListener('click', (e) => {
+    e.preventDefault();
+    /* Checking if the input is empty or not. */
+    
+        deleteAll();
+    
+});
+
 eventListeners();
 function eventListeners(){
     document.addEventListener('DOMContentLoaded', () => {
