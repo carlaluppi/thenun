@@ -15,6 +15,12 @@ let faceNun = document.querySelector('.faceNun');
 let hallWayCreepy = document.querySelector('.hallWay');   
 
 
+function retrieveNames() {
+  savedNames = JSON.parse(localStorage.getItem("tasks"));
+}
+retrieveNames();
+console.log(savedNames)
+
 // const randomElement = items[Math.floor(Math.random() * items.length)];
 const killBtnHandler = () => {
   spin();
@@ -56,24 +62,25 @@ roulette.appendChild(newItem);
 //  }
 
 
+
 // funcion que crea un nombre al azar, cambia el nombre target por ese nombre, y luego lo elimina del array "items"
 
 
+
 function nameSelect() {
-  let random = items.sort(() => .5 - Math.random()).slice(0, 1)
+  let random = savedNames.sort(() => .5 - Math.random()).slice(0, 1)
   let elem = document.querySelectorAll('span');
   console.log(random)
-  elem[19].innerText = random[0].name
-  items.forEach(function(e){
-    if(e.name == random[0].name){
-        items.splice(items.findIndex(function(i){
-          return i.name === random[0].name;
+  elem[19].innerText = random[0].task
+  savedNames.forEach(function(e){
+    if(e.task == random[0].task){
+        savedNames.splice(savedNames.findIndex(function(i){
+          return i.task === random[0].task;
         }), 1);
-        console.log(items)
-    }
+    }});
     elem[19].classList.add('flip-in-ver-right')
+    console.log(savedNames)
     setTimeout(function(){elem[19].classList.remove('flip-in-ver-right')}, 2000)
-  })
 }
 // funcion que resetear el array cuando queda el ultimo coder 
 
@@ -98,7 +105,9 @@ function nameReset() {
 function nunAnimation() {
   faceNun.classList.add("scale-up-center");
   sounds.killSound.play();
-  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2000)
+
+  setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
+
 }
 
 // funcion de oscurecer la pantalla 
@@ -138,11 +147,13 @@ sounds.win.pause();
 currentTime=0;
 }, 7000);
 setTimeout(function(){nunAnimation()}, 7500);
+
 setTimeout(function(){oscurecerAnimation();}, 9500);
 setTimeout(function(){deathPopUp();
 }, 11000);
 
 setTimeout(function(){gameReset();}, 15000);
+
 
 }
 
@@ -155,6 +166,5 @@ function deathPopUp() {
   setTimeout(function(){
     popup.classList.toggle("show");
   }, 3000)
-
 
 }

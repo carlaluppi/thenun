@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root {
+    --orange: #d95550;
+    --lightOrange: #dd6662;
+    --veryLightOrange: #f89e8b;
+    --white: #ffffff;
+    --grey: #6a6767;
+    --cinzel: 'Cinzel Decorative', cursive;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--cinzel);
+}
+
+
+
+.codeList {
+
+    /* background-color: var(--orange); */
+    background-color: #100f0f;
+    background-image: linear-gradient(180deg, #100f0f 1%, #f50707 54%, #030303 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+h1 {
+    margin-top: 80px;
+    letter-spacing: 0.1em;
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.7px #86090A;
+
+}
+
+.inputButton {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+}
+
+form {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    box-shadow: 3px 2px 2px #FFFFFF;
+}
+
+form input[type="text"] {
+    background: none;
+    color: var(--white);
+    -webkit-text-stroke: 0.2px #86090A;
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+}
+
+
+form input[type="text"]::placeholder {
+    color: var(--white);
+    border: none;
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+}
+
+.addBtn {
+    font-size: 1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: none;
+    color: rgb(143, 11, 11);
+}
+
+
+
+.addBtn:hover {
+    background-color: black;
+    cursor: pointer;
+    color: rgb(143, 11, 11);
+}
+
+
+
+.list-container {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-container {
+    /* background-color: var(--white); */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 13px;
+    border-radius: 4px;
+    width: 40%;
+    font-size: 1.0em;
+    font-weight: 500;
+    color: var(--white);
+
+}
+
+.closeBtn {
+    width: 20px;
+    height: 20px;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+}
+
+
+#statutus {
+    margin-top: 25px;
+    font-size: 1.3em;
+    color: var(--veryLightOrange);
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: left;
+    border-color: #ffe5e5;
+    padding: 2px 13px;
+    border: solid 2px red;
+    border-radius: 2px;
+}
