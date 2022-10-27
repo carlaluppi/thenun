@@ -1,4 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+:root {
+  --orange: #d95550;
+  --lightOrange: #dd6662;
+  --veryLightOrange: #f89e8b;
+  --white: #ffffff;
+  --grey: #6a6767;
+  --cinzel: "Cinzel Decorative", cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: var(--cinzel);
+}
+
+body {
+  background-color: #100f0f;
+  background-image: linear-gradient(180deg, #4a0909 0%, #f50707 74%, #030303 100%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-coder-list h2 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  letter-spacing: 0.1em;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FFFFFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(196, 177, 107, 0.79);
+}
+
+.input-btn {
+  display: flex;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 48px;
+}
+
+form {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  box-shadow: 3px 2px 2px #FFFFFF;
+}
+
+form input[type=text] {
+  background: none;
+  color: var(--white);
+  -webkit-text-stroke: 0.2px #86090A;
+  border-style: none;
+  padding: 10px 10px 10px 10px;
+}
+
+form input[type=text]::-moz-placeholder {
+  color: var(--white);
+  border: none;
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
+}
+
+form input[type=text]:-ms-input-placeholder {
+  color: var(--white);
+  border: none;
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
+}
+
+form input[type=text]::placeholder {
+  color: var(--white);
+  border: none;
+  font-size: 0.8em;
+  letter-spacing: 0.3em;
+}
+
+form input[type=text]:focus {
+  outline: none;
+}
+
+.addBtn {
+  font-size: 1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-style: none;
+  color: rgb(143, 11, 11);
+  cursor: pointer;
+}
+
+.input-btn button:not(:hover) {
+  transition: all 0.5s 0s ease;
+}
+
+.list-tasks {
+  margin-bottom: 11%;
+}
+
+.list-tasks ul {
+  padding-left: 0;
+  margin: 0 13px;
+}
+
+.list-tasks li {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: white;
+}
+
+span {
+  cursor: pointer;
+}
+
+/*remove all btn*/
+.remove-all {
+  border-radius: none;
+  border-color: white;
+  background-color: rgb(143, 11, 11);
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 9px 16px;
+}
+
+.remove-all:hover {
+  background-color: black;
+  color: var(--white);
+  transition: all 0.5s 0s ease;
+}
+
+.remove-all:not(:hover) {
+  transition: all 0.5s 0s ease;
+}
+
+.arrow {
+  margin-top: 10%;
+  margin-left: 90%;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/*responsive*/
+@media only screen and (max-width: 768px) {
+  .section-coder-list {
+    width: 90%;
+  }
+}
+/* validation message */
+.error {
+  color: rgb(238, 3, 3);
+  text-align: left;
+  background-color: var(--white);
+  padding: 2px 13px;
+  border: solid 2px var(--white);
+  border-radius: 2px;
 }/*# sourceMappingURL=nameList.css.map */
