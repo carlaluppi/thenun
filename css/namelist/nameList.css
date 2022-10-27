@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
+:root {
+  --primary-color: rgba(201, 5, 5, 1);
+  --secondary-color: rgb(243,215,39);
+}
+
 :root {
   --orange: #d95550;
   --lightOrange: #dd6662;

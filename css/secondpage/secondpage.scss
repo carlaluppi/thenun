@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap');
+@use  '../variables';
 
 body {
   display: flex;
@@ -50,4 +50,5 @@ h1 {
   cursor: pointer;
   padding: 9px 16px;
   margin-bottom: 50px;
+  font-family: "Cinzel Decorative", cursive;
 }

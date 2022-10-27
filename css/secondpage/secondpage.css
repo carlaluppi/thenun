@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
+:root {
+  --primary-color: rgba(201, 5, 5, 1);
+  --secondary-color: rgb(243,215,39);
+}
+
 body {
   display: flex;
   align-items: center;
@@ -44,4 +49,5 @@ h1 {
   cursor: pointer;
   padding: 9px 16px;
   margin-bottom: 50px;
+  font-family: "Cinzel Decorative", cursive;
 }/*# sourceMappingURL=secondpage.css.map */

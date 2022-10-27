@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap');
+@import '../variables';
 
 	html{
 		height: 100%;
@@ -7,6 +7,7 @@
 
 main {
 	height: 100vh;
+	font-family: "Cinzel Decorative", cursive;
 }
 
 @mixin backgroundHall { 
@@ -68,7 +69,7 @@ main {
 			font-size: 72px;
 		}
 		span {
-			font-family: Cinzel;
+			
 			letter-spacing: -1px;
 			font-size: 40px;
 			color: #f8f9fa;
@@ -100,7 +101,7 @@ button {
 }
 #txt {
 	margin-top: 1em;
-	font-family: Cinzel;
+	
 	color: var(--primary-color);
 }
 

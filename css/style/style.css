@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
+:root {
+  --primary-color: rgba(201, 5, 5, 1);
+  --secondary-color: rgb(243,215,39);
+}
+
 html {
   height: 100%;
 }
 
 main {
   height: 100vh;
+  font-family: "Cinzel Decorative", cursive;
 }
 
 .hallWay {
@@ -60,7 +66,6 @@ main {
   font-size: 72px;
 }
 #roulette div span {
-  font-family: Cinzel;
   letter-spacing: -1px;
   font-size: 40px;
   color: #f8f9fa;
@@ -93,7 +98,6 @@ button:hover {
 
 #txt {
   margin-top: 1em;
-  font-family: Cinzel;
   color: var(--primary-color);
 }
 

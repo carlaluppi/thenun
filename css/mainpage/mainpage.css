@@ -1,10 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@200;300&display=swap");
+:root {
+  --primary-color: rgba(201, 5, 5, 1);
+  --secondary-color: rgb(243,215,39);
+}
+
 body {
   background: url("/images/ay.jpg") no-repeat center 0% fixed;
   background-size: cover;
+  font-family: "Cinzel Decorative", cursive;
 }
 
 .landingTitle {
-  font-family: "Cinzel";
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
@@ -15,7 +21,7 @@ body {
 }
 
 .container-btn {
-  height: 70vh;
+  height: 50vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -38,4 +44,5 @@ body {
   cursor: pointer;
   padding: 9px 16px;
   margin-bottom: 50px;
+  font-family: "Cinzel Decorative", cursive;
 }/*# sourceMappingURL=mainpage.css.map */

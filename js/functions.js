@@ -91,7 +91,7 @@ function nameSelect() {
   function deathPopUp() {
     let elem = document.querySelectorAll('span')
     let popup = document.getElementById("myPopup");
-    popup.innerText = `El/la coder ${elem[19].innerText} ha sido sacrificad@.`
+    popup.innerText = `${elem[19].innerText} ha sido sacrificad@.`
     popup.classList.toggle("show");
     setTimeout(function(){
       popup.classList.toggle("show");
