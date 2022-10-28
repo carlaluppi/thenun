@@ -99,9 +99,11 @@ button {
 	background: var(--primary-color);
 	border: 0;
 	color: #FFF;
+	font-family: "Cinzel Decorative", cursive;
 	&:hover {
 		border: 1px solid white;
 		cursor: pointer;
+		
 	}
 }
 
@@ -109,7 +111,7 @@ button {
 	display: flex;
 	justify-content:space-between;
 	padding: 0.5em;
-
+	font-family: "Cinzel Decorative", cursive;
 }
 
 #txt {

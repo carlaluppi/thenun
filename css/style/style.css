@@ -94,6 +94,7 @@ button {
   background: var(--primary-color);
   border: 0;
   color: #FFF;
+  font-family: "Cinzel Decorative", cursive;
 }
 button:hover {
   border: 1px solid white;
@@ -104,6 +105,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   padding: 0.5em;
+  font-family: "Cinzel Decorative", cursive;
 }
 
 #txt {
