@@ -31,9 +31,14 @@ function nameSelect() {
  * If the length of the array savedNames is less than 2, then the page will redirect to mainpage.html
  */
   function gameReset () {
-    if(savedNames.length < 2 )
-    {document.location.href="mainpage.html"}
-  }  
+    if(savedNames.length < 1 ){
+    let popup2 = document.getElementById("myPopup2");
+    popup2.innerText = `Todos los coders han sido sacrificados`
+    popup2.classList.toggle("show");
+    setTimeout(function(){
+      popup2.classList.toggle("show")}, 3000);
+    setTimeout(function(){document.location.href="index.html"}, 4500);
+  }}
   
   // resetea el nombre del target a "Coder"
   
@@ -106,6 +111,5 @@ function nameSelect() {
     setTimeout(function(){
       popup.classList.toggle("show");
     }, 3000)
-  
   }
   
