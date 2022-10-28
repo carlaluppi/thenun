@@ -6,7 +6,7 @@
 - [WHEEL OF NUN](#wheel-of-nun)   
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Información General](#información-general)
-  - [Capturas de pantalla](#capturas-de-pantalla)
+  - [Despliege](#despliegue)
   - [Tecnologías](#tecnologías)
   - [Colaboración](#colaboración)
   - [Autores](#autores)
@@ -22,16 +22,11 @@ El juego consiste en añadir nombres a una lista que luego serán elegidos de ma
 
 ***
 
-## Capturas de pantalla
+## Despliegue
 
-![screenshot0****](/src/componentes/imagenes/screenshoot01.png)
-***
-![screenshot0****](/src/componentes/imagenes/screenshoot02.png)
-***
-![screenshot0****](/src/componentes/imagenes/screenshoot03.png)
+![](/images/ay.jpg)
 
-***
-![screenshot0****](/src/componentes/imagenes/screenshoot04.png)
+[The nun]('https://thenun.netlify.app/')
 
 ***
 ## Tecnologías
@@ -46,7 +41,6 @@ Lista de tecnologías usadas en el desarrollo del proyecto:
 ***
 
 
-***
 
 
 ## Colaboración
