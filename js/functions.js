@@ -2,10 +2,17 @@
 
 
 
+/**
+ * It selects a random name from an array, displays it, and then removes it from the array.
+ * </code>
+ * @returns the value of the last expression.
+ */
 function nameSelect() {
     let random = savedNames.sort(() => .5 - Math.random()).slice(0, 1)
     let elem = document.querySelectorAll('span');
     console.log(random)
+    /* Setting the innerText of the 19th element in the array of elements to the task property of the
+    first element in the array of objects. */
     elem[19].innerText = random[0].task
     savedNames.forEach(function(e){
       if(e.task == random[0].task){
@@ -20,6 +27,9 @@ function nameSelect() {
   // funcion que resetear el array cuando queda el ultimo coder 
   
   
+/**
+ * If the length of the array savedNames is less than 2, then the page will redirect to mainpage.html
+ */
   function gameReset () {
     if(savedNames.length < 2 )
     {document.location.href="mainpage.html"}
