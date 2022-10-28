@@ -1,10 +1,11 @@
 # THE NUN
 
+
 ## Tabla de Contenidos
-- [THE NUN](#the-nun)
+- [WHEEL OF NUN](#wheel-of-nun)   
   - [Tabla de Contenidos](#tabla-de-contenidos)
   - [Información General](#información-general)
-  - [Capturas de pantalla](#capturas-de-pantalla)
+  - [Despliege](#despliegue)
   - [Tecnologías](#tecnologías)
   - [Colaboración](#colaboración)
   - [Autores](#autores)
@@ -20,6 +21,7 @@ El juego consiste en añadir nombres a una lista que luego serán elegidos de ma
 
 ***
 
+<<<<<<< HEAD
 ## Capturas de pantalla
 
 ![screenshot0****](/src/componentes/imagenes/screenshoot01.png)
@@ -30,6 +32,13 @@ El juego consiste en añadir nombres a una lista que luego serán elegidos de ma
 
 ***
 ![screenshot0****](/src/componentes/imagenes/screenshoot04.png)
+=======
+## Despliegue
+
+![](/images/ay.jpg)
+
+[The nun]('https://thenun.netlify.app/')
+>>>>>>> 977924bc5c75ebc5f708af2a9e62f3cb3b9759e0
 
 ***
 ## Tecnologías
@@ -44,7 +53,10 @@ Lista de tecnologías usadas en el desarrollo del proyecto:
 ***
 
 
+<<<<<<< HEAD
 ***
+=======
+>>>>>>> 977924bc5c75ebc5f708af2a9e62f3cb3b9759e0
 
 
 ## Colaboración
