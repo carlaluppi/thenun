@@ -1,7 +1,7 @@
-// funcion que crea un nombre al azar, cambia el nombre target por ese nombre, y luego lo elimina del array "items"
 
-
-
+/**
+ * Selecciona un nombre aleatorio de un array, y luego lo elimina de este.
+ */
 function nameSelect() {
     let random = savedNames.sort(() => .5 - Math.random()).slice(0, 1)
     let elem = document.querySelectorAll('span');
@@ -17,9 +17,11 @@ function nameSelect() {
       console.log(savedNames)
       setTimeout(function(){elem[19].classList.remove('flip-in-ver-right')}, 2000)
   }
-  // funcion que resetear el array cuando queda el ultimo coder 
   
   
+  /**
+   * Si el array está vacio, muestra un popup y nos lleva a la página principal.
+   */
   function gameReset () {
     if(savedNames.length < 1 ){
     let popup2 = document.getElementById("myPopup2");
@@ -30,42 +32,51 @@ function nameSelect() {
     setTimeout(function(){document.location.href="index.html"}, 4500);
   }}
   
-  // resetea el nombre del target a "Coder"
   
+  /**
+   *  Selecciona todos los spans en el documento, y luego cambia el texto del span numero 20(target) a 'Coder'.
+   */
   function nameReset() {
     let elem = document.querySelectorAll('span');
     elem[19].innerText = "Coder";
   }
   
   
-  // funcion que añade animaciones de la monja
+
   
+  /**
+   * Cuando la funcion es llamada, añade la clase 'scale-up-center'(animacion) al elemento con el id 'faceNun'
+   * pone el sonido killSound, y despues de 2.5 segundos, quita la clase 'scale-up-center' del elemento que tiene id 'faceNun'
+   */
   function nunAnimation() {
     faceNun.classList.add("scale-up-center");
     sounds.killSound.play();
   
     setTimeout(function(){faceNun.classList.remove("scale-up-center")}, 2500)
-  
   }
   
-  // funcion de oscurecer la pantalla 
   
+  /**
+   * Cuando la funcion es llamada, añade la clase 'hallwWayCreepy' al elemento con el id 'hallWayCreepy' y luego
+   * lo quita despues de 4.5 segundos.
+   */
   function oscurecerAnimation() {
     hallWayCreepy.classList.add("hallWayCreepy");
   setTimeout(function(){hallWayCreepy.classList.remove("hallWayCreepy")}, 4500)}
     
   
-  // funcion que raya el nombre
   
+ /**
+  * cuando la funcion es llamada, añade la clase 'crossout' al span numero 20(target) y luego
+  * lo quita despues de 2 segundos.
+  */
   function crossOutAnimation() {
     let elem = document.querySelectorAll('span')
     elem[19].classList.add('crossout')
     setTimeout(function(){elem[19].classList.remove('crossout')}, 2000)
   }
   
-  // funcion que ejecuta el nameChange, gira la ruleta, y utiliza sonidos(los cuales resetea al final)
-  
-  
+
   function spin() {
   nameReset();
   sounds.spin.play();
@@ -92,7 +103,10 @@ function nameSelect() {
   setTimeout(function(){gameReset();}, 15000);
   }
   
-  // Death
+  
+  /**
+   * Utiliza el texto del span numero 20 en el html y lo pone en el popup.
+   */
   function deathPopUp() {
     let elem = document.querySelectorAll('span')
     let popup = document.getElementById("myPopup");
