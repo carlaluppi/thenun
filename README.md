@@ -1,32 +1,73 @@
-# WHEEL OF NUN
-#### VIDEOGAME
+# THE NUN
 
-
-Three.Js
-
-* 1 Go to https://github.com/mrdoob/three.js/tree/dev/build
-* 2 Download the file three.min.js wich is inside the build folder
-* 3 Download the file GLTFLoader.js wich is inside the examples folder
-* 4 Include this two files on your main branch at level of your index.html
-    * 4.1
-* 5 Finally include this two scripts inside the <body>.
-
-
-*italic*
-**bold**
-
-[google](https://www.google.com/)
-
-[google](https://www.google.com/ "Google testing")
-
-> this is a quote
+## Tabla de Contenidos
+- [THE NUN](#the-nun)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Información General](#información-general)
+  - [Capturas de pantalla](#capturas-de-pantalla)
+  - [Tecnologías](#tecnologías)
+  - [Colaboración](#colaboración)
+  - [Autores](#autores)
+  - [FAQs](#faqs)
 
 ***
----
+## Información General
+The Nun es un juego desarrollado en javascript básado en la película "The Nun". 
 
-```
-this is an example
-```
-* [x] ux/ui degign
-* [x] three js
-* [ ] local storage 
+El juego consiste en añadir nombres a una lista que luego serán elegidos de manera aleatoria para ser sacrificados por la monja.
+
+*Proyecto en proceso de desarrollo.*   
+
+***
+
+## Capturas de pantalla
+
+![screenshot0****](/src/componentes/imagenes/screenshoot01.png)
+***
+![screenshot0****](/src/componentes/imagenes/screenshoot02.png)
+***
+![screenshot0****](/src/componentes/imagenes/screenshoot03.png)
+
+***
+![screenshot0****](/src/componentes/imagenes/screenshoot04.png)
+
+***
+## Tecnologías
+Lista de tecnologías usadas en el desarrollo del proyecto:
+* HTML: Version HTML 5
+* Sass
+* JavaScript 
+* Node  Js
+* Npm 
+
+
+***
+
+
+***
+
+
+## Colaboración
+El proyecto está abierto a cualquier persona que quiera aportar ideas o sugerencias. Podéis contactar con nosotros a través de:
+
+Github
+
+***
+## Autores 
+[Alexandra](https://github.com/AlexandraJaramillo)  
+[Carla](https://github.com/carlilu)   
+[Alessandro](https://github.com/AlessHub)  
+[Eberth](https://github.com/EberthCastro)  
+[Jerry](https://github.com/JerryAiyaniyo)  
+
+
+***
+## FAQs
+
+Preguntas frecuentes:
+1. **¿Cuando le doy al botón de Reset no se resetea, esto es normal?**
+De momento al usarse Local Storage no hemos usado la función para eliminar la lista de manera externa
+
+
+
+
