@@ -1,0 +1,262 @@
+@import '../variables';
+
+
+
+html{
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	height: 100vh;
+	font-family: "Cinzel Decorative", cursive;
+}
+
+@mixin backgroundHall { 
+	background: url("/images/background.png")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.hallWay {
+	@include backgroundHall();
+}
+
+.hallWayCreepy {
+	
+	background-color: rgb(25,25,25);
+    background-blend-mode: soft-light;
+	
+	
+}
+
+#square {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+#box {
+    width: 300px;
+    height: 120px;
+    margin: 2em auto 0 auto;
+    background: #FFF;
+    overflow: hidden;
+    border: 2px solid #5d575a;
+    background-color: var(--primary-color);
+}
+#roulette {
+	width: 400px;
+	height: 140px;
+	display: inline-flex;
+	div:first-of-type{
+		border-left: 2px solid #888
+	}
+	div {
+        min-width: 200px;
+        height: 125px;
+        flex-direction: column;
+		transform: translateX(45px);
+        display: flex;
+        border-right: 2px solid #888;
+        justify-content: center;
+        align-items: center;
+		i {
+			font-size: 72px;
+		}
+		span {
+			
+			letter-spacing: -1px;
+			font-size: 24px;
+			color: #f8f9fa;
+			text-shadow: 4px 3px 2px #141619;
+		}
+	}
+}
+#arrow {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 80px solid white;
+	position: relative;
+	top: -25px;
+	opacity: 90%;
+}
+button {
+	width: 150px;
+	height: 50px;
+	font-size: 22px;
+	background: var(--primary-color);
+	border: 0;
+	color: #FFF;
+	font-family: "Cinzel Decorative", cursive;
+	&:hover {
+		border: 1px solid white;
+		cursor: pointer;
+		
+	}
+}
+
+.btnContainer {
+	display: flex;
+	justify-content:space-between;
+	padding: 0.5em;
+	font-family: "Cinzel Decorative", cursive;
+}
+
+#txt {
+	margin-top: 1em;
+	
+	color: var(--primary-color);
+}
+
+
+
+.nunContainer {
+	display: flex;
+    justify-content: center;
+	object-fit: cover;
+	align-items: center;
+}
+.faceNun { 
+	opacity: 0%;
+	width: 10vh;
+	height: 10vh;
+	z-index: 1;
+	
+}
+
+// pop 
+
+/* Popup container */
+.popUpWrapper{
+	display: flex;
+	justify-content: center;
+}.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+	visibility: hidden;
+	width: 160px;
+	background-color: var(--primary-color);
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s
+  }
+
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.popup{
+		display: flex;
+		justify-content: center;
+	}.popuptext {
+		visibility: show;
+		min-height: 80px;
+		background-color: var(--primary-color);
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		display: flex;
+		padding: 8px 0;
+		align-items: center;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	#box {
+		width: 455px;
+	}
+	.popup{
+		display: flex;
+		justify-content: center;
+	}.popuptext {
+		font-size: 16px;
+		min-width: 170px;
+		visibility: show;
+		min-height: 100px;
+		background-color: var(--primary-color);
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		display: flex;
+		padding: 8px 0;
+		align-items: center;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	#box {
+		width: 650px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#box {
+		width: 750px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	#box {
+		width: 800px;
+	}
+}
